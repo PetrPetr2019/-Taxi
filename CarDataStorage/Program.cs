@@ -26,6 +26,18 @@ namespace CarDataStorage
                 new Autopark{NamePark = "7-автобусный парк", AdressPlacement = "Город Москва", SqerAreaAvto = 2000, Encrypt =45, ID = 1},
                 new Autopark{NamePark = "33-авто парк", AdressPlacement = "Новые черемушки", SqerAreaAvto = 100, Encrypt = 33, ID = 2}
             };
+            var Query = from TaxiNumber in taxis // Подсчет количества машин в парке
+                        group TaxiNumber by TaxiNumber.MarkaAvto into t
+                        select new
+                        {
+                            t.Key,
+                        };
+
+            int count = taxis.Count();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("Количество машин в парке\n" + count);
+
+
             // Группировка данных  с использованием group
 
             //var Query = from TaxiCar in taxis
