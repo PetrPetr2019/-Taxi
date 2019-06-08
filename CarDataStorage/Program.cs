@@ -26,6 +26,20 @@ namespace CarDataStorage
                 new Autopark{NamePark = "7-автобусный парк", AdressPlacement = "Город Москва", SqerAreaAvto = 2000, Encrypt =45, ID = 1},
                 new Autopark{NamePark = "33-авто парк", AdressPlacement = "Новые черемушки", SqerAreaAvto = 100, Encrypt = 33, ID = 2}
             };
+            // Группировка данных  с использованием group
+
+            //var Query = from TaxiCar in taxis
+            //            group TaxiCar by TaxiCar.MarkaAvto into t
+            //            select new
+            //            {
+            //                t.Key,
+            //            };
+            //foreach(var Taxis in taxis)
+            //{
+            //    Console.ForegroundColor = ConsoleColor.Yellow;
+            //    Console.WriteLine("\nМарка машины:{0} -Дата выпуска:{1}", Taxis.MarkaAvto, Taxis.Data);
+            //}
+
             // Сортировка по дате выпуска с применением запроса Linq
             //var Query = from Cars in taxis
             //            orderby Cars.Data ascending
